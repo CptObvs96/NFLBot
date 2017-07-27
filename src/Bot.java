@@ -109,6 +109,26 @@ private String text, eingabe;
         {
             text = "Spiel 1 ausgewählt";
         }
+        else if (eingabe.equalsIgnoreCase("13"))
+        {
+            text = "Spiel 1 ausgewählt";
+        }
+        else if (eingabe.equalsIgnoreCase("14"))
+        {
+            text = "Spiel 1 ausgewählt";
+        }
+        else if (eingabe.equalsIgnoreCase("15"))
+        {
+            text = "Spiel 1 ausgewählt";
+        }
+        else if (eingabe.equalsIgnoreCase("16"))
+        {
+            text = "Spiel 1 ausgewählt";
+        }
+        else if (eingabe.equalsIgnoreCase("17"))
+        {
+            text = "Spiel 1 ausgewählt";
+        }
         else if (eingabe.equalsIgnoreCase("Redzone"))
         {
             text = "All Spiele ausgewählt ";
