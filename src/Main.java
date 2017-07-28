@@ -2,7 +2,7 @@ import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
 
-public class Hauptklasse {
+public class Main {
 
     // Dies ist ein test
 
