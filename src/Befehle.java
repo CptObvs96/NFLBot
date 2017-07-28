@@ -5,13 +5,15 @@ public class Befehle {
 
     public String texter (int id) {
         umbr = "\n";
+
+        System.out.println(id);
        switch (id) {
            case 1:
                text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl";
            case 2:
                text = "Hier eine Übersicht über alle Befehle:" + umbr + umbr + "GAMEDAY  - Spieltagsübersicht" + umbr + "REDZONE  - Alle Spiele werden ____________ getickert" + umbr + "Spiel: 1 - 17- Jeweilige Partie wird  ____________ getickert" + umbr + "STOP/KILL - Spiel auswahl wurde ____________ gelöscht ";
            case 3:
-               text = "Spiele würden gelöscht";
+               text = "Spiele wurden gelöscht";
            case 4:
                ;
            case 5:
@@ -48,8 +50,7 @@ public class Befehle {
                ;
            case 21:
                ;
-           default:
-               text = "ungültige Eingabe";
+
        }
         return text;
     }

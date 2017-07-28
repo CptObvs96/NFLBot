@@ -75,64 +75,7 @@ private Befehle bef = new Befehle();
         {
             text = "Spiel 2 ausgewählt";
         }
-        else if (eingabe.equalsIgnoreCase("3"))
-        {
-            text = "Spiel 3 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("4"))
-        {
-            text = "Spiel 4 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("5"))
-        {
-            text = "Spiel 5 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("6"))
-        {
-            text = "Spiel 6 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("7"))
-        {
-            text = "Spiel 7 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("8"))
-        {
-            text = "Spiel 8 ausgewählt";
-        }else if (eingabe.equalsIgnoreCase("9"))
-        {
-            text = "Spiel 9 ausgewählt";
-        }else if (eingabe.equalsIgnoreCase("10"))
-        {
-            text = "Spiel 10 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("11"))
-        {
-            text = "Spiel 11 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("12"))
-        {
-            text = "Spiel 12 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("13"))
-        {
-            text = "Spiel 13 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("14"))
-        {
-            text = "Spiel 14 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("15"))
-        {
-            text = "Spiel 15 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("16"))
-        {
-            text = "Spiel 16 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("17"))
-        {
-            text = "Spiel 17 ausgewählt";
-        }
+
         else if (eingabe.equalsIgnoreCase("Redzone"))
         {
             text = "All Spiele ausgewählt ";
@@ -140,7 +83,8 @@ private Befehle bef = new Befehle();
         else if (eingabe.equalsIgnoreCase("Hallo"))
         {
             //text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
-            bef.texter(1);
+          text =  bef.texter(1);
+          System.out.println(bef.texter(1));
         }
         else if (eingabe.equalsIgnoreCase("start"))
         {
@@ -152,16 +96,17 @@ private Befehle bef = new Befehle();
             text = "Spiele würden gelöscht";
 
         }
-        else if (eingabe.equalsIgnoreCase("stop p"))
+        else if (eingabe.equalsIgnoreCase("stopp"))
         {
             text = "Spiele würden gelöscht";
 
         }
-
+/*
          else
         {
             text = "ungültige Eingabe";
         }
 
+*/
     }
 }
