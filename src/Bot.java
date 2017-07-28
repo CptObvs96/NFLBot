@@ -136,11 +136,11 @@ private String text, eingabe, umbr, botid;
         }
         else if (eingabe.equalsIgnoreCase("Hallo"))
         {
-            text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
+            text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
         }
         else if (eingabe.equalsIgnoreCase("start"))
         {
-            text = "Hier eine Übersicht über alle Befehle:" + umbr + "GAMEDAY - Spieltagsübersicht" + umbr + "REDZONE - Alle Spiele werden ____________ getickert"+ umbr + "1 - 17 - Jeweilige Partie wird getickert"+ umbr +"STOP/KILL - Spiel auswahl wurde ____________ gelöscht " ;
+            text = "Hier eine Übersicht über alle Befehle:" + umbr + umbr + "GAMEDAY  - Spieltagsübersicht" + umbr + "REDZONE  - Alle Spiele werden ____________ getickert"+ umbr + "Spiel: 1 - 17- Jeweilige Partie wird  ____________ getickert"+ umbr +"STOP/KILL - Spiel auswahl wurde ____________ gelöscht " ;
 
         }else if (eingabe.equalsIgnoreCase("stop"))
         {
