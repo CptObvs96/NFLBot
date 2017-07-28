@@ -1,4 +1,4 @@
-public class Gameweek
+public class Teamdata
 {
 String pats = "New England Patriots";  int  patsId = 1;
 String bills = "Buffelo Bills"; int  billsId = 2;
@@ -39,37 +39,37 @@ public String teamgetter(Integer id ) {
 
      switch(id){
             case 1: team = getPats();
-            case 2: team =getBills();
-            case 3: team =getJets();
-            case 4: team =getDolphins();
-            case 5: team =getVikings();
-            case 6: team =getPackers();
-            case 7: team =getBears();
-            case 8: team =getLions();
-            case 9: team =getCowboys();
-            case 10: team =getTexans();
-            case 11: team =getBucs();
-            case 12: team =getChiefs();
-            case 13: team =getRams();
-            case 14: team =getChargers();
-            case 15: team =getRaiders();
-            case 16: team =getSeahawks();
-            case 17: team =getFalcons();
-            case 18: team =getSaints();
-            case 19: team =getBrowns();
-            case 20: team =getGiants();
-            case 21: team =getBroncos();
-            case 22: team =getCardinals();
-            case 23: team =getPanthers();
-            case 24: team =getRedskins();
-            case 25: team =getSteelers();
-            case 26: team =getSanfra();
-            case 27: team =getEagles();
-            case 28: team =getBengals();
-            case 29: team =getJags();
-            case 30: team =getColts();
-            case 31: team =getRavens();
-            case 32: team =getTitans();
+            case 2: team = getBills();
+            case 3: team = getJets();
+            case 4: team = getDolphins();
+            case 5: team = getVikings();
+            case 6: team = getPackers();
+            case 7: team = getBears();
+            case 8: team = getLions();
+            case 9: team = getCowboys();
+            case 10: team = getTexans();
+            case 11: team = getBucs();
+            case 12: team = getChiefs();
+            case 13: team = getRams();
+            case 14: team = getChargers();
+            case 15: team = getRaiders();
+            case 16: team = getSeahawks();
+            case 17: team = getFalcons();
+            case 18: team = getSaints();
+            case 19: team = getBrowns();
+            case 20: team = getGiants();
+            case 21: team = getBroncos();
+            case 22: team = getCardinals();
+            case 23: team = getPanthers();
+            case 24: team = getRedskins();
+            case 25: team = getSteelers();
+            case 26: team = getSanfra();
+            case 27: team = getEagles();
+            case 28: team = getBengals();
+            case 29: team = getJags();
+            case 30: team = getColts();
+            case 31: team = getRavens();
+            case 32: team = getTitans();
             default: team = "Fehler";
         }
            return team;
