@@ -7,6 +7,7 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 public class Bot extends TelegramLongPollingBot {
 
 private String text, eingabe, umbr, botid;
+private Befehle bef = new Befehle();
 
 
 
@@ -58,13 +59,13 @@ private String text, eingabe, umbr, botid;
     { umbr = "\n";
         if (eingabe.equalsIgnoreCase("gameday"))
         {
-            text = "Spieltagsübersicht: " + umbr + umbr +
-
-                    "New England Patriots VS Kansas City Chifes  - Gillette Stadium ";
+            text = "Spieltagsübersicht: " + umbr + umbr + "New England Patriots VS Kansas City Chifes  - Gillette Stadium ";
 
         } else if (eingabe.equalsIgnoreCase("Kill"))
         {
-            text = "Spiele würden gelöscht";
+           // text = "Spiele würden gelöscht";
+
+            bef.texter(3);
 
         } else if (eingabe.equalsIgnoreCase("1"))
         {
@@ -138,11 +139,13 @@ private String text, eingabe, umbr, botid;
         }
         else if (eingabe.equalsIgnoreCase("Hallo"))
         {
-            text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
+            //text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
+            bef.texter(1);
         }
         else if (eingabe.equalsIgnoreCase("start"))
         {
-            text = "Hier eine Übersicht über alle Befehle:" + umbr + umbr + "GAMEDAY  - Spieltagsübersicht" + umbr + "REDZONE  - Alle Spiele werden ____________ getickert"+ umbr + "Spiel: 1 - 17- Jeweilige Partie wird  ____________ getickert"+ umbr +"STOP/KILL - Spiel auswahl wurde ____________ gelöscht " ;
+            //text = "Hier eine Übersicht über alle Befehle:" + umbr + umbr + "GAMEDAY  - Spieltagsübersicht" + umbr + "REDZONE  - Alle Spiele werden ____________ getickert"+ umbr + "Spiel: 1 - 17- Jeweilige Partie wird  ____________ getickert"+ umbr +"STOP/KILL - Spiel auswahl wurde ____________ gelöscht " ;
+            bef.texter(2);
 
         }else if (eingabe.equalsIgnoreCase("stop"))
         {
