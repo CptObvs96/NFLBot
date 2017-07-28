@@ -84,7 +84,7 @@ private Befehle bef = new Befehle();
         {
             //text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
           text =  bef.texter(1);
-          System.out.println(bef.texter(1));
+          System.out.println("Botklasse: "+ bef.texter(1));
         }
         else if (eingabe.equalsIgnoreCase("start"))
         {

@@ -6,7 +6,7 @@ public class Befehle {
     public String texter (int id) {
         umbr = "\n";
 
-        System.out.println(id);
+        System.out.println("Befehlklasse: " +id);
        switch (id) {
            case 1:
                text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl";
@@ -52,6 +52,8 @@ public class Befehle {
                ;
 
        }
+
+        System.out.println("Befehlklasse: " + text);
         return text;
     }
 
