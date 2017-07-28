@@ -6,14 +6,19 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 
 public class Bot extends TelegramLongPollingBot {
 
-private String text, eingabe;
+private String text, eingabe, umbr, botid;
+
+
+
+
+
     @Override
     public void onUpdateReceived(Update update) {
 
-        System.out.println(update.getMessage().getFrom().getFirstName() + ": " + update.getMessage().getText());
+       // System.out.println(update.getMessage().getFrom().getFirstName() + ": " + update.getMessage().getText());
 
          eingabe = update.getMessage().getText();
-         System.out.println(eingabe);
+        // System.out.println(eingabe);
          nachrichtengenerator(eingabe);
 
 
@@ -43,11 +48,14 @@ private String text, eingabe;
 
     @Override
     public String getBotToken() {
-        return "356914309:AAGI12RShZjRf9IyMgJpxBZNKpwCT0MlJP0";
+
+    botid = "356914309:AAGI12RShZjRf9IyMgJpxBZNKpwCT0MlJP0";
+
+            return botid;
     }
 
     private void nachrichtengenerator(String eingabe)
-    {
+    { umbr = "\n";
         if (eingabe.equalsIgnoreCase("gameday"))
         {
             text = "Spieltagsübersicht";
@@ -126,6 +134,24 @@ private String text, eingabe;
         {
             text = "All Spiele ausgewählt ";
         }
+        else if (eingabe.equalsIgnoreCase("Hallo"))
+        {
+            text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
+        }
+        else if (eingabe.equalsIgnoreCase("start"))
+        {
+            text = "Hier eine Übersicht über alle Befehle:" + umbr + "GAMEDAY - Spieltagsübersicht" + umbr + "REDZONE - Alle Spiele werden ____________ getickert"+ umbr + "1 - 17 - Jeweilige Partie wird getickert"+ umbr +"STOP/KILL - Spiel auswahl wurde ____________ gelöscht " ;
+
+        }else if (eingabe.equalsIgnoreCase("stop"))
+        {
+            text = "Spiele würden gelöscht";
+
+        }
+
+
+
+
+
          else
         {
             text = "ungültige Eingabe";
