@@ -58,7 +58,9 @@ private String text, eingabe, umbr, botid;
     { umbr = "\n";
         if (eingabe.equalsIgnoreCase("gameday"))
         {
-            text = "Spieltagsübersicht";
+            text = "Spieltagsübersicht: " + umbr + umbr +
+
+                    "New England Patriots VS Kansas City Chifes  - Gillette Stadium ";
 
         } else if (eingabe.equalsIgnoreCase("Kill"))
         {
@@ -147,10 +149,11 @@ private String text, eingabe, umbr, botid;
             text = "Spiele würden gelöscht";
 
         }
+        else if (eingabe.equalsIgnoreCase("stop p"))
+        {
+            text = "Spiele würden gelöscht";
 
-
-
-
+        }
 
          else
         {
