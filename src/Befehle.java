@@ -1,9 +1,14 @@
-public class Befehle {
+import java.sql.*;
+
+public class Befehle
+
+{
 
     String text, umbr, week;
 
     Teamdata tdata = new Teamdata();
 
+    DBZugriff dbZugriff = new DBZugriff();
 
 
     public String texter (int id) {
@@ -98,7 +103,17 @@ public String gameWeekGenerator(int week) {
 }
 
 public String gamedatengenerator ()
-{ String game =  tdata.gameGenereator(1,3);
+{ dbZugriff.oeffneDB();
+    String abfrage = "SELECT teamID, Gegner"+1+ " FROM nflbot.gameplan;";
+    ResultSet rs = dbZugriff.lesen(abfrage);
+    dbZugriff.schliesseDB();
+
+
+
+
+
+
+    String game =  tdata.gameGenereator(1,3);
 
         return game;
 }
