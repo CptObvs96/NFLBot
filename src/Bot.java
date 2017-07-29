@@ -76,8 +76,13 @@ private Befehle bef = new Befehle();
         {           comandId = 8;
         }else if (eingabe.equalsIgnoreCase("stopp"))
         {           comandId = 8;
+        }else if (eingabe.equalsIgnoreCase("Week 1"))
+        {           comandId = 9;
+                    bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week1"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
         }
-
 
 
 

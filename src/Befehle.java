@@ -1,8 +1,9 @@
 public class Befehle {
 
-    String text, umbr;
+    String text, umbr, week;
 
     Teamdata tdata = new Teamdata();
+
 
 
     public String texter (int id) {
@@ -19,7 +20,24 @@ public class Befehle {
            case 3: //Kill
                text = "Spiele wurden gelöscht"; break;
            case 4: //Gameday
-               text = "Spieltagsübersicht: " + umbr + umbr + gameWeekGenerator(1); break;
+               text = "Bitte Gameweek auswählen: " + umbr + umbr
+                       + "Week 1 " + umbr
+                       + "Week 2 " + umbr
+                       + "Week 3 " + umbr
+                       + "Week 4 " + umbr
+                       + "Week 5 " + umbr
+                       + "Week 6 " + umbr
+                       + "Week 7 " + umbr
+                       + "Week 8 " + umbr
+                       + "Week 9 " + umbr
+                       + "Week 10 " + umbr
+                       + "Week 10 " + umbr
+                       + "Week 12 " + umbr
+                       + "Week 13 " + umbr
+                       + "Week 14 " + umbr
+                       + "Week 15 " + umbr
+                       + "Week 16 " + umbr
+                       + "Week 117 " ; break;
            case 5: // Redzone
                text = "Alle Spiele wurden ausgewählt"; break;
            case 6:  //Spiel 1
@@ -28,9 +46,11 @@ public class Befehle {
                text = "Spiel 2 ausgewählt"; break;
            case 8: // Stopp
                text = "Spiele wurden gelöscht"; break;
-         /*case 9:
-               ;
-           case 10:
+           case 9:
+               text = gameWeekGenerator(Integer.parseInt(getWeek())); break;
+             //  text = "test"; break;
+
+            case 10:
                ;
            case 11:
                ;
@@ -52,7 +72,9 @@ public class Befehle {
                ;
            case 20:
                ;
-           case 21:*/
+           case 21:
+               ;
+
           default: text = "Ungültige Eingabe"; break;
 
 
@@ -62,18 +84,31 @@ public class Befehle {
 
 }
 
-public String gameWeekGenerator(int Week) {
-        String gameWeek = "Gameweek";
+public String gameWeekGenerator(int week) {
+    String gameWeek = "Folgende Spiele sind in Week "+ week +":"+ umbr + umbr;
 
-        gameWeek = gamedatengenerator();
+    for ( int i = 1; i <=17; i++)
+    { String spiel = "Spiel " + i + ": "+umbr + gamedatengenerator() + umbr;
+
+     gameWeek = gameWeek + spiel + umbr;
+
+    }
+
     return gameWeek;
 }
 
-
 public String gamedatengenerator ()
-{ String game = "Spiel1: " + umbr + umbr + tdata.gameGenereator(1,3);
+{ String game =  tdata.gameGenereator(1,3);
 
         return game;
+}
+
+public String getWeek() {
+        return week;
+}
+
+public void setWeek(String week) {
+        this.week = week;
 }
 
 }
