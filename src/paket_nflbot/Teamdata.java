@@ -1,3 +1,5 @@
+package paket_nflbot;
+
 public class Teamdata
 {
 String pats = "New England Patriots";  int  patsId = 1;
@@ -70,7 +72,7 @@ public String teamgetter(Integer id ) {
             case 30: team = getColts(); break;
             case 31: team = getRavens(); break;
             case 32: team = getTitans(); break;
-            default: team = "Fehler"; break;
+            default: team = "Bye WeeK"; break;
         }
            return team;
     }
@@ -78,13 +80,10 @@ public String teamgetter(Integer id ) {
   public String gameGenereator (int id1, int id2)
   { String partie, team1, team2;
 
-  if(teamgetter(id1).equalsIgnoreCase("fehler"))
-  {team1 = "Ungülige Eingabe";
-  } else
-      { team1 = teamgetter(id1);
-      }
-  if(teamgetter(id2).equalsIgnoreCase("fehler"))
-  {team2 = "Ungülige Eingabe";
+  team1 = teamgetter(id1);
+
+  if(teamgetter(id2).equalsIgnoreCase("Bye Week"))
+  {team2 = "@  Bye Week";
   } else
       { team2 = teamgetter(id2);
       }

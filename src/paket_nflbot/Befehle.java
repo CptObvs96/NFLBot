@@ -1,3 +1,5 @@
+package paket_nflbot;
+
 import java.sql.*;
 
 public class Befehle
@@ -5,6 +7,7 @@ public class Befehle
 {
 
     String text, umbr, week;
+    int i = 1;
 
     Teamdata tdata = new Teamdata();
 
@@ -42,11 +45,11 @@ public class Befehle
                        + "Week 14 " + umbr
                        + "Week 15 " + umbr
                        + "Week 16 " + umbr
-                       + "Week 117 " ; break;
+                       + "Week 17 " ; break;
            case 5: // Redzone
                text = "Alle Spiele wurden ausgewählt"; break;
            case 6:  //Spiel 1
-               text = gamedatengenerator(); break;
+               text =  "Spiel 2 ausgewählt"; break;
            case 7: // Spiel 2
                text = "Spiel 2 ausgewählt"; break;
            case 8: // Stopp
@@ -92,32 +95,47 @@ public class Befehle
 public String gameWeekGenerator(int week) {
     String gameWeek = "Folgende Spiele sind in Week "+ week +":"+ umbr + umbr;
 
-    for ( int i = 1; i <=17; i++)
-    { String spiel = "Spiel " + i + ": "+umbr + gamedatengenerator() + umbr;
+    try {
+    dbZugriff.oeffneDB();
+    String abfrage = "SELECT teamID, Gegner"+week+ " FROM nflbot.gameplan;";
 
-     gameWeek = gameWeek + spiel + umbr;
+    ResultSet rs = dbZugriff.lesen(abfrage);
 
+
+        while (rs.next())
+
+       // for (  i= 1; i <=17; i++)
+        { String spiel = "Spiel " + i + ": "+umbr + tdata.gameGenereator(i, rs.getInt("Gegner"+week)) + umbr;
+          i++;
+         gameWeek = gameWeek + spiel + umbr;
+
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
-
+    dbZugriff.schliesseDB();
     return gameWeek;
 }
-
-public String gamedatengenerator ()
-{ dbZugriff.oeffneDB();
+//----------------------------------------------------------------------------------------------------------------
+/*public String gamedatengenerator ()
+{   dbZugriff.oeffneDB();
     String abfrage = "SELECT teamID, Gegner"+1+ " FROM nflbot.gameplan;";
     ResultSet rs = dbZugriff.lesen(abfrage);
+
+    while(rs.next())
+    {
+    }
+
+
+
+
+
     dbZugriff.schliesseDB();
-
-
-
-
-
-
     String game =  tdata.gameGenereator(1,3);
 
         return game;
 }
-
+*/
 public String getWeek() {
         return week;
 }

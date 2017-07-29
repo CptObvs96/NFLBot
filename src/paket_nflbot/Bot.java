@@ -1,3 +1,4 @@
+package paket_nflbot;
 import com.sun.xml.internal.ws.resources.SenderMessages;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
@@ -79,6 +80,11 @@ private Befehle bef = new Befehle();
         }else if (eingabe.equalsIgnoreCase("Week 1"))
         {           comandId = 9;
                     bef.setWeek(eingabe.substring(5));
+        }
+        else if (eingabe.equalsIgnoreCase("Week 2")) {
+            comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+
         }else if (eingabe.equalsIgnoreCase("Week1"))
         {           comandId = 9;
             bef.setWeek(eingabe.substring(4));
