@@ -56,57 +56,37 @@ private Befehle bef = new Befehle();
     }
 
     private void nachrichtengenerator(String eingabe)
-    { umbr = "\n";
-        if (eingabe.equalsIgnoreCase("gameday"))
-        {
-            text = "Spieltagsübersicht: " + umbr + umbr + "New England Patriots VS Kansas City Chifes  - Gillette Stadium ";
+    { umbr = "\n"; int comandId = 0;
 
-        } else if (eingabe.equalsIgnoreCase("Kill"))
-        {
-           // text = "Spiele würden gelöscht";
-
-            bef.texter(3);
-
-        } else if (eingabe.equalsIgnoreCase("1"))
-        {
-            text = "Spiel 1 ausgewählt";
-        }
-        else if (eingabe.equalsIgnoreCase("2"))
-        {
-            text = "Spiel 2 ausgewählt";
-        }
-
-        else if (eingabe.equalsIgnoreCase("Redzone"))
-        {
-            text = "All Spiele ausgewählt ";
-        }
-        else if (eingabe.equalsIgnoreCase("Hallo"))
-        {
-            //text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl" ;
-          text =  bef.texter(1);
-          System.out.println("Botklasse: "+ bef.texter(1));
-        }
-        else if (eingabe.equalsIgnoreCase("start"))
-        {
-            //text = "Hier eine Übersicht über alle Befehle:" + umbr + umbr + "GAMEDAY  - Spieltagsübersicht" + umbr + "REDZONE  - Alle Spiele werden ____________ getickert"+ umbr + "Spiel: 1 - 17- Jeweilige Partie wird  ____________ getickert"+ umbr +"STOP/KILL - Spiel auswahl wurde ____________ gelöscht " ;
-            bef.texter(2);
-
+        if (eingabe.equalsIgnoreCase("Hallo"))
+        {           comandId = 1;
+        } else if (eingabe.equalsIgnoreCase("Start"))
+        {           comandId = 2;
+        } else if (eingabe.equalsIgnoreCase("kill"))
+        {           comandId = 3;
+        }else if (eingabe.equalsIgnoreCase("gameday"))
+        {           comandId = 4;
+        }else if (eingabe.equalsIgnoreCase("Redzone"))
+        {           comandId = 5;
+        }else if (eingabe.equalsIgnoreCase("1"))
+        {           comandId = 6;
+        }else if (eingabe.equalsIgnoreCase("2"))
+        {           comandId = 7;
         }else if (eingabe.equalsIgnoreCase("stop"))
-        {
-            text = "Spiele würden gelöscht";
-
-        }
-        else if (eingabe.equalsIgnoreCase("stopp"))
-        {
-            text = "Spiele würden gelöscht";
-
-        }
-/*
-         else
-        {
-            text = "ungültige Eingabe";
+        {           comandId = 8;
+        }else if (eingabe.equalsIgnoreCase("stopp"))
+        {           comandId = 8;
         }
 
-*/
+
+
+
+        else
+        {text = "ungültige Eingabe";
+        }
+
+
+      text = bef.texter(comandId);
+
     }
 }
