@@ -2,6 +2,8 @@ public class Befehle {
 
     String text, umbr;
 
+    Teamdata tdata = new Teamdata();
+
 
     public String texter (int id) {
         umbr = "\n"; int comID;
@@ -17,13 +19,13 @@ public class Befehle {
            case 3: //Kill
                text = "Spiele wurden gelöscht"; break;
            case 4: //Gameday
-               text = "Spieltagsübersicht: " + umbr + umbr + "New England Patriots VS Kansas City Chifes  - Gillette Stadium "; break;
+               text = "Spieltagsübersicht: " + umbr + umbr + gameWeekGenerator(1); break;
            case 5: // Redzone
                text = "Alle Spiele wurden ausgewählt"; break;
            case 6:  //Spiel 1
-               text = "Spiel 1 ausgewählt"; break;
-           case 7: // Spiel 22´
-               text = "Spiel 1 ausgewählt"; break;
+               text = gamedatengenerator(); break;
+           case 7: // Spiel 2
+               text = "Spiel 2 ausgewählt"; break;
            case 8: // Stopp
                text = "Spiele wurden gelöscht"; break;
          /*case 9:
@@ -58,6 +60,20 @@ public class Befehle {
          return text;
 
 
+}
+
+public String gameWeekGenerator(int Week) {
+        String gameWeek = "Gameweek";
+
+        gameWeek = gamedatengenerator();
+    return gameWeek;
+}
+
+
+public String gamedatengenerator ()
+{ String game = "Spiel1: " + umbr + umbr + tdata.gameGenereator(1,3);
+
+        return game;
 }
 
 }
