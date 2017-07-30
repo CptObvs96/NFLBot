@@ -80,23 +80,115 @@ private Befehle bef = new Befehle();
         }else if (eingabe.equalsIgnoreCase("Week 1"))
         {           comandId = 9;
                     bef.setWeek(eingabe.substring(5));
-        }
-        else if (eingabe.equalsIgnoreCase("Week 2")) {
-            comandId = 9;
+        }else if (eingabe.equalsIgnoreCase("Week 2"))
+        {           comandId = 9;
+                    bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 3"))
+        {           comandId = 9;
             bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 4"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 5"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 6"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 7"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 8"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 9"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 10"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 11"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 12"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 13"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 14"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 15"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 16"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Week 17"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(5));
+        }
 
-        }else if (eingabe.equalsIgnoreCase("Week1"))
+        else if (eingabe.equalsIgnoreCase("Week1"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week2"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week3"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week4"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week5"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week6"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week7"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week8"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week9"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week10"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week11"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week12"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week13"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week14"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week15"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week16"))
+        {           comandId = 9;
+            bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Week17"))
         {           comandId = 9;
             bef.setWeek(eingabe.substring(4));
         }
 
 
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
         else
         {text = "ungültige Eingabe";
         }
-
-
       text = bef.texter(comandId);
 
     }

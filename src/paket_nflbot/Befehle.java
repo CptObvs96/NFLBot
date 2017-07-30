@@ -97,14 +97,14 @@ public String gameWeekGenerator(int week) {
 
     try {
     dbZugriff.oeffneDB();
-    String abfrage = "SELECT teamID, Gegner"+week+ " FROM nflbot.gameplan;";
+    String abfrage = "SELECT * FROM nflbot.spiele where week = '"+week+"';";
 
     ResultSet rs = dbZugriff.lesen(abfrage);
 
         while (rs.next())
 
        // for (  i= 1; i <=17; i++)
-        { String spiel = "Spiel " + i + ": "+umbr + tdata.gameGenereator(rs.getInt("teamid"),rs.getInt("Gegner"+week)) + umbr;
+        { String spiel = "Spiel " + i + ": "+umbr + tdata.gameGenereator(rs.getInt("away"),rs.getInt("home")) + umbr;
           i++;
          gameWeek = gameWeek + spiel + umbr;
 
