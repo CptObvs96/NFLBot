@@ -66,7 +66,7 @@ public class DBZugriff
         try
         {  // ResultSet erstellen
 
-            System.out.println("DBZ "+pSQL);
+
             rs = stmtSQL.executeQuery(pSQL);
 
         }

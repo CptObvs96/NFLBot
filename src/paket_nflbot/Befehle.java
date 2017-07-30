@@ -101,11 +101,10 @@ public String gameWeekGenerator(int week) {
 
     ResultSet rs = dbZugriff.lesen(abfrage);
 
-
         while (rs.next())
 
        // for (  i= 1; i <=17; i++)
-        { String spiel = "Spiel " + i + ": "+umbr + tdata.gameGenereator(i, rs.getInt("Gegner"+week)) + umbr;
+        { String spiel = "Spiel " + i + ": "+umbr + tdata.gameGenereator(rs.getInt("teamid"),rs.getInt("Gegner"+week)) + umbr;
           i++;
          gameWeek = gameWeek + spiel + umbr;
 
@@ -114,7 +113,9 @@ public String gameWeekGenerator(int week) {
         e.printStackTrace();
     }
     dbZugriff.schliesseDB();
+    i = 1;
     return gameWeek;
+
 }
 //----------------------------------------------------------------------------------------------------------------
 /*public String gamedatengenerator ()
