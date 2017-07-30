@@ -9,7 +9,8 @@ public class Befehle
 {
 
     String text;
-    String umbr;
+    String umbr = "\n";
+    String lz = " ";
     String week;
 
 
@@ -23,7 +24,7 @@ public class Befehle
 
 
     public String texter (int id) {
-        umbr = "\n"; int comID;
+         int comID;
 
         comID = id;
         switch (comID) {
@@ -31,8 +32,10 @@ public class Befehle
                text = "Herzlich Willkommen zum NFL Liveticker Bot" + umbr + umbr + "Um alle Befehle zu sehen schick mir den START Befehl";  break;
            case 2: //Start
                text = "Hier eine Übersicht über alle Befehle:" + umbr + umbr + "GAMEDAY  - Spieltagsübersicht" +
-                       umbr + "REDZONE  - Alle Spiele werden ____________ getickert" + umbr + "Spiel: 1 - 17- Jeweilige Partie wird  ____________ getickert" +
-                       umbr + "STOP/KILL - Spiel auswahl wurde ____________ gelöscht "; break;
+                       umbr + "WEEK 1 - 17 - Übersicht der Spieltage:" +
+                       umbr + "REDZONE/ALLE  - Alle Spiele werden ausgewählt" +
+                       umbr + "SPIEL 1 - 17- Jeweilige Partie wird ausgewählt" +
+                       umbr + "STOP/KILL - Spiel auswahl wurde gelöscht "; break;
            case 3: //Kill
                text = "Spiele wurden gelöscht"; break;
            case 4: //Gameday
