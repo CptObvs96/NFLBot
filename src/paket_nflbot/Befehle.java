@@ -125,12 +125,21 @@ public String gameWeekGenerator(int week) {
 
 public String gamedatengenerator (int spiel)
 {  String gameday = "Spiel "+ spiel +" wurde ausgewählt. "+ umbr + umbr ;
-  int hometeam;
+  int hometeam; String weekspielid;
 
-   dbZugriff.oeffneDB();
+    dbZugriff.oeffneDB();
+
+
+  if (spiel < 10)
+  { weekspielid = week+"0"+spiel;
+
+  }
+  else
+  { weekspielid = week+spiel;
+  }
     try {
 
-        String abfrage = "SELECT * FROM nflbot.spiele where weekspielid = '"+week+spiel+"';" ;
+        String abfrage = "SELECT * FROM nflbot.spiele where weekspielid = '"+weekspielid.toString()+"';" ;
 
         ResultSet rs = dbZugriff.lesen(abfrage);
 
@@ -151,8 +160,9 @@ public String gamedatengenerator (int spiel)
     catch (SQLException e) {
         e.printStackTrace();
     }
-    dbZugriff.schliesseDB();
 
+
+    dbZugriff.schliesseDB();
 
     return gameday;
 }
