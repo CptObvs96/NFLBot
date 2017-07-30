@@ -1,13 +1,21 @@
 package paket_nflbot;
 
+import org.telegram.telegrambots.api.methods.send.SendMessage;
+
 import java.sql.*;
 
 public class Befehle
 
 {
 
-    String text, umbr, week;
-    int i = 1;
+    String text;
+    String umbr;
+    String week;
+
+
+
+    String spiel;
+    int i = 1, gweek, phalter =0;
 
     Teamdata tdata = new Teamdata();
 
@@ -49,39 +57,37 @@ public class Befehle
            case 5: // Redzone
                text = "Alle Spiele wurden ausgewählt"; break;
            case 6:  //Spiel 1
-               text =  "Spiel 2 ausgewählt"; break;
+               text =  "Platzhalter"; break;
            case 7: // Spiel 2
-               text = "Spiel 2 ausgewählt"; break;
+               text = "Platzhalter"; break;
            case 8: // Stopp
                text = "Spiele wurden gelöscht"; break;
            case 9:
                text = gameWeekGenerator(Integer.parseInt(getWeek())); break;
-             //  text = "test"; break;
-
-            case 10:
-               ;
+           case 10:
+               text = gamedatengenerator(Integer.parseInt(getSpiel())); break;
            case 11:
-               ;
+               ; break;
            case 12:
-               ;
+               ; break;
            case 13:
-               ;
+               ; break;
            case 14:
-               ;
+               ; break;
            case 15:
-               ;
+               ; break;
            case 16:
-               ;
+               ; break;
            case 17:
-               ;
+               ; break;
            case 18:
-               ;
+               ; break;
            case 19:
-               ;
+               ; break;
            case 20:
-               ;
+               ; break;
            case 21:
-               ;
+               ; break;
 
           default: text = "Ungültige Eingabe"; break;
 
@@ -94,7 +100,7 @@ public class Befehle
 
 public String gameWeekGenerator(int week) {
     String gameWeek = "Folgende Spiele sind in Week "+ week +":"+ umbr + umbr;
-
+    gweek = week;
     try {
     dbZugriff.oeffneDB();
     String abfrage = "SELECT * FROM nflbot.spiele where week = '"+week+"';";
@@ -115,28 +121,51 @@ public String gameWeekGenerator(int week) {
     dbZugriff.schliesseDB();
     i = 1;
     return gameWeek;
-
 }
-//----------------------------------------------------------------------------------------------------------------
-/*public String gamedatengenerator ()
-{   dbZugriff.oeffneDB();
-    String abfrage = "SELECT teamID, Gegner"+1+ " FROM nflbot.gameplan;";
-    ResultSet rs = dbZugriff.lesen(abfrage);
 
-    while(rs.next())
-    {
+public String gamedatengenerator (int spiel)
+{  String gameday = "Spiel "+ spiel +" wurde ausgewählt. "+ umbr + umbr ;
+  int hometeam;
+
+   dbZugriff.oeffneDB();
+    try {
+
+        String abfrage = "SELECT * FROM nflbot.spiele where weekspielid = '"+week+spiel+"';" ;
+
+        ResultSet rs = dbZugriff.lesen(abfrage);
+
+        rs.next();
+        String aspiel =  tdata.gameGenereator(rs.getInt("away"),rs.getInt("home")) ;
+        gameday = gameday + aspiel + umbr +umbr ;
+
+        hometeam = rs.getInt("home");
+
+        String abfrage2 = "SELECT * FROM nflbot.stadiumdata where teamid = '"+hometeam+"';";
+
+        ResultSet rsa = dbZugriff.lesen(abfrage2);
+        rsa.next();
+
+        String stadiumdata = rsa.getString("name")+ umbr + rsa.getString("stadt") + " ," + rsa.getString("staat");
+        gameday = gameday + stadiumdata;
     }
-
-
-
-
-
+    catch (SQLException e) {
+        e.printStackTrace();
+    }
     dbZugriff.schliesseDB();
-    String game =  tdata.gameGenereator(1,3);
 
-        return game;
+
+    return gameday;
 }
-*/
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------
+
+
 public String getWeek() {
         return week;
 }
@@ -144,6 +173,14 @@ public String getWeek() {
 public void setWeek(String week) {
         this.week = week;
 }
+
+public String getSpiel() {
+        return spiel;
+    }
+
+public void setSpiel(String spiel) {
+        this.spiel = spiel;
+    }
 
 }
 

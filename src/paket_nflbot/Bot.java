@@ -79,10 +79,10 @@ private Befehle bef = new Befehle();
         {           comandId = 8;
         }else if (eingabe.equalsIgnoreCase("Week 1"))
         {           comandId = 9;
-                    bef.setWeek(eingabe.substring(5));
+            bef.setWeek(eingabe.substring(5));
         }else if (eingabe.equalsIgnoreCase("Week 2"))
         {           comandId = 9;
-                    bef.setWeek(eingabe.substring(5));
+            bef.setWeek(eingabe.substring(5));
         }else if (eingabe.equalsIgnoreCase("Week 3"))
         {           comandId = 9;
             bef.setWeek(eingabe.substring(5));
@@ -128,9 +128,7 @@ private Befehle bef = new Befehle();
         }else if (eingabe.equalsIgnoreCase("Week 17"))
         {           comandId = 9;
             bef.setWeek(eingabe.substring(5));
-        }
-
-        else if (eingabe.equalsIgnoreCase("Week1"))
+        }else if (eingabe.equalsIgnoreCase("Week1"))
         {           comandId = 9;
             bef.setWeek(eingabe.substring(4));
         }else if (eingabe.equalsIgnoreCase("Week2"))
@@ -181,6 +179,108 @@ private Befehle bef = new Befehle();
         }else if (eingabe.equalsIgnoreCase("Week17"))
         {           comandId = 9;
             bef.setWeek(eingabe.substring(4));
+        }else if (eingabe.equalsIgnoreCase("Spiel 1"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 2"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 3"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 4"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 5"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 6"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 7"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 8"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 9"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 10"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 11"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 12"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 13"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 14"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 15"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 16"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel 17"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(6));
+        }else if (eingabe.equalsIgnoreCase("Spiel1"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel2"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel3"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel4"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel5"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel6"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel7"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel8"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel9"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel10"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel11"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel12"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel13"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel14"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel15"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel16"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
+        }else if (eingabe.equalsIgnoreCase("Spiel17"))
+        {           comandId = 10;
+            bef.setSpiel(eingabe.substring(5));
         }
 
 
