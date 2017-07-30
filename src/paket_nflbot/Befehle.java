@@ -70,27 +70,38 @@ public class Befehle
            case 10:
                text = gamedatengenerator(Integer.parseInt(getSpiel())); break;
            case 11:
-               ; break;
+               ;
+               break;
            case 12:
-               ; break;
+               ;
+               break;
            case 13:
-               ; break;
+               ;
+               break;
            case 14:
-               ; break;
+               ;
+               break;
            case 15:
-               ; break;
+               ;
+               break;
            case 16:
-               ; break;
+               ;
+               break;
            case 17:
-               ; break;
+               ;
+               break;
            case 18:
-               ; break;
+               ;
+               break;
            case 19:
-               ; break;
+               ;
+               break;
            case 20:
-               ; break;
+               ;
+               break;
            case 21:
-               ; break;
+               ;
+               break;
 
           default: text = "Ungültige Eingabe"; break;
 
