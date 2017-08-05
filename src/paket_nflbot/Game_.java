@@ -15,4 +15,5 @@ public class Game_ {
     public static volatile SingularAttribute<Game, Integer> gameId;
     public static volatile SingularAttribute<Game, String> week;
     public static volatile SingularAttribute<Game, Integer> year;
+    public static volatile SingularAttribute<Game, Integer> timestampID;
 }

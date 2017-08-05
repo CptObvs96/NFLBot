@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class NflDotComLiveScoresParser {
 
-    public List<Game> parse(URL url) {
+    public List<Game> parse(URL url, int timestampid) {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(JsonParser.Feature.ALLOW_MISSING_VALUES, true);
 
@@ -44,6 +44,7 @@ public class NflDotComLiveScoresParser {
                 // we can probably ignore this as we don't plan on being 100% real-time
                 game.setWeek(gameNode.get(12).asText());
                 game.setYear(gameNode.get(13).asInt());
+                game.setTimestampID(timestampid);
                 gamesList.add(game);
             }
         }
@@ -52,4 +53,7 @@ public class NflDotComLiveScoresParser {
         }
         return gamesList;
     }
+
+
+
 }

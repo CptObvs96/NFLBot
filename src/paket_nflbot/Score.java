@@ -26,7 +26,11 @@ public class Score {
                     throw new RuntimeException("couldn't parse url: "+ url, mue);
                 }
 
-                List<Game> games = this.parser.parse(url);
+
+                long time = System.currentTimeMillis();
+
+
+                List<Game> games = this.parser.parse(url, timeSetter(time));
 
                 try {
                     wait(300);
@@ -34,8 +38,7 @@ public class Score {
                     e.printStackTrace();
                 }
 
-                long time = System.currentTimeMillis();
-                timeSetter(time);
+
             }
 
         }
@@ -46,30 +49,32 @@ public class Score {
 
 
     }
-  public void timeSetter (long ptime)
-   {
-    dbZugriff.oeffneDB();
+  public int timeSetter (long ptime) {
+      dbZugriff.oeffneDB();
 
 
-    String timestamper ="Insert into Timestamp '"+ ptime +"';";
-    dbZugriff.aendern(timestamper);
-    String timestamperId = "Select timestampId from timestamp where timestamp = '" +ptime+'"';
-    ResultSet rs = dbZugriff.lesen(timestamperId);
+      String timestamper = "Insert into Timestamp '" + ptime + "';";
+      dbZugriff.aendern(timestamper);
+      String timestamperId = "Select timestampId from timestamp where timestamp = '" + ptime + '"';
+      ResultSet rs = dbZugriff.lesen(timestamperId);
 
-       try {
-           rs.next();
-       } catch (SQLException e) {
-           e.printStackTrace();
-       }
+      try {
+          rs.next();
+      } catch (SQLException e) {
+          e.printStackTrace();
+      }
 
-       try {
-           int timestampid = rs.getInt("timestamp");
-       } catch (SQLException e) {
-           e.printStackTrace();
-       }
+      int timestampid = 0;
+      try {
+          timestampid = rs.getInt("timestamp");
+      } catch (SQLException e) {
+          e.printStackTrace();
+      }
 
 
-       dbZugriff.schliesseDB();
-   }
+      dbZugriff.schliesseDB();
+
+      return timestampid;
+  }
 
 }

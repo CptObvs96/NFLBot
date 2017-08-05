@@ -5,9 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * Game entity for our sample project.
- */
+
 @Entity
 @Table(name = "GAME")
 public class Game {
@@ -48,6 +46,17 @@ public class Game {
 
     @Column(name = "YEAR")
     private Integer year;
+
+    @Column(name = "TimestampID")
+    private Integer timestampID;
+
+    public Integer getTimestampID() {
+        return timestampID;
+    }
+
+    public void setTimestampID(Integer timestampID) {
+        this.timestampID = timestampID;
+    }
 
     public String getDay() {
         return day;
@@ -160,4 +169,7 @@ public class Game {
                 ", year='" + year + '\'' +
                 '}';
     }
+
+
+
 }
